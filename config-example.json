@@ -2,6 +2,6 @@
     "name": "c9 Launcher",
     "database": "c9launcher.db",
     "session": "session.db",
-    "routes": "routes",
-    "crypto": "a secret to encrypt workspace passwords"
+    "crypto": "a secret to encrypt workspace passwords",
+    "sdkpath": "/home/c9/c9sdk/"
 }

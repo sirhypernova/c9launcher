@@ -16,7 +16,7 @@ const cryptr     = new Cryptr(config.crypto);
 const database   = require('./db.js')(config,cryptr);
 database.then(async db => {
     const cloud9     = require('./cloud9')(config,db);
-    const c9         = cloud9(path.resolve('/home/c9/c9sdk/','server.js'),(await db.Config.get('SELECT * FROM config WHERE key = ?','Workspace Directory'))._value);
+    const c9         = cloud9(path.resolve(config.sdkpath,'server.js'),(await db.Config.get('SELECT * FROM config WHERE key = ?','Workspace Directory'))._value);
     const proxy      = require('http-proxy').createProxyServer({ws:true});
     const fs         = require('fs');
     
