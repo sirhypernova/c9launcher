@@ -4,7 +4,8 @@
   "description": "Cloud9 Launcher",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "dev": "node index.js",
+    "start": "NODE_ENV=production node index.js"
   },
   "author": "SirHyperNova",
   "license": "ISC",
