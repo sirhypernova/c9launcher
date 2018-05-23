@@ -20,16 +20,6 @@ database.then(async db => {
     const proxy      = require('http-proxy').createProxyServer({ws:true});
     const fs         = require('fs');
     
-    // Start a workspace named Testing, with the folder as test, port as 8083, and collaboration enabled, then output to console
-    // var workspace = c9.start('Testing','test',8083,{username: 'sirhypernova', password: 'test'},true);
-    // Same as above, but first open port
-    // var workspace = c9.start('Testing','test',false,{username: 'sirhypernova', password: 'test'},true);
-    // workspace.then((child) => {
-    //     child.stdout.pipe(process.stdout);
-    // }).catch(err => {
-    //   console.log(err);
-    // });
-    
     app.set('view engine', 'ejs');
     
     // Helmet
@@ -47,7 +37,7 @@ database.then(async db => {
     
     // Initialize Routes
     
-    require('./routes')(app,config,db,proxy,c9,cryptr)(config.routes).then(() => {
+    require('./routes')(app,config,db,proxy,c9,cryptr)('routes').then(() => {
         console.log('Loaded routes successfully.');
         
         // Register 404 Page

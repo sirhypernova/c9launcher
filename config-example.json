@@ -1,0 +1,7 @@
+{
+    "name": "c9 Launcher",
+    "database": "c9launcher.db",
+    "session": "session.db",
+    "routes": "routes",
+    "crypto": "a secret to encrypt workspace passwords"
+}

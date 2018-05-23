@@ -12,7 +12,7 @@ module.exports = function (app,config,db,proxy,c9,cryptr) {
                 next();
             }))
             .on('data',function (file) {
-                var route = file.path.replace(path.resolve(config.routes),'').replace('.js','').replace('index','').replace('+','/');
+                var route = file.path.replace(path.resolve('routes'),'').replace('.js','').replace('index','').replace('+','/');
                 var run = require(file.path)(app, config, db, proxy, c9, cryptr);
                 app.all(route,(req,res) => {
                     if ('all' in run) {
