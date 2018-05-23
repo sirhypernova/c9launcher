@@ -53,3 +53,12 @@ You should see a screen that looks like this:
 Set a name for your workspace, and choose a folder from the dropdown.
 Set your username and password you use to authenticate to the workspace.
 Once you are done, click submit.
+
+## Launch Options
+
+You can launch c9launcher with two different options.
+These options are stored in environment variables.
+
+`IP`: The IP for the web server to listen on. Defaults to `0.0.0.0`.
+
+`PORT`: The port for the web server to listen on. Defaults to `8080`.
