@@ -1,0 +1,17 @@
+<% include ../partials/head %>
+    <% include ../partials/navbar %>
+    <div class="container my-2">
+        <div class="row">
+            <div class="col-md-12 my-2">
+                <h3 class="d-flex justify-content-between align-items-center">Users <a href="/admin/newuser" class="btn btn-primary">New</a></h3>
+                <hr>
+                <% include ../partials/users %>
+            </div>
+            <div class="col-md-12 my-2">
+                <h3 class="d-flex">Config</h3>
+                <hr>
+                <% include ../partials/config %>
+            </div>
+        </div>
+    </div>
+<% include ../partials/footer %>

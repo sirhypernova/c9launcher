@@ -1,0 +1,30 @@
+{
+  "name": "c9launcher",
+  "version": "1.0.0",
+  "description": "Cloud9 Launcher",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "SirHyperNova",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^2.0.1",
+    "body-parser": "^1.18.3",
+    "connect-sqlite3": "^0.9.11",
+    "cryptr": "^3.0.0",
+    "deasync": "^0.1.13",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "helmet": "^3.12.0",
+    "http-proxy": "^1.17.0",
+    "ip": "^1.1.5",
+    "is-port-available": "^0.1.5",
+    "klaw": "^2.1.1",
+    "portfinder": "^1.0.13",
+    "sqlite3po": "^1.5.0",
+    "through2": "^2.0.3",
+    "tree-kill": "^1.2.0"
+  }
+}

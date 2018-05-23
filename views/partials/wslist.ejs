@@ -1,0 +1,13 @@
+<ul class="list-group">
+<% for (var ws of workspaces) { %>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <%= ws._key %>
+            <div>
+                <a href="/admin/deletews/<%= ws._id %>" class="btn btn-danger<%= !user.admin ? ' disabled' : '' %>">Delete</a>
+                <a href="/admin/ws/<%= ws._id %>" class="btn btn-primary<%= !user.admin ? ' disabled' : '' %>">Modify</a>
+                <a href="http://<%= ip %>:<%= c9.getChild(ws._key) ? c9.getChild(ws._key).port : '' %>" target="_blank" class="btn btn-success<%= !c9.getChild(ws._key) ? ' disabled' : '' %>">Open</a>
+                <a href="/togglews/<%= ws._id %>" class="btn btn-<%= c9.getChild(ws._key) ? 'warning' : 'info' %>"><%= c9.getChild(ws._key) ? 'Stop' : 'Start' %></a>
+            </div>
+        </li>
+<% } %>
+</ul>

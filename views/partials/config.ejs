@@ -1,0 +1,15 @@
+<ul class="list-group">
+<% config.forEach(o => { %>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <%= o._key %>
+            <div>
+                <form method="POST">
+                    <label for="value"></label>
+                    <input type="text" class="d-none" name="id" value="<%= o._id %>">
+                    <input class="form-control-sm" type="text" name="value" id="value" placeholder="Value" value="<%= o._value %>">
+                    <input type="submit" class="d-none">
+                </form>
+            </div>
+        </li>
+<% }); %>
+</ul>

@@ -1,0 +1,18 @@
+<% include ../partials/head %>
+    <% include ../partials/navbar %>
+    <div class="container my-2">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Admin <small class="text-muted">New Workspace</small></h3>
+                <% if (error) { %>
+                    <h5 class="text-danger">Error: <%= error %></h5>
+                <% } %>
+                <% if (success) { %>
+                    <h5 class="text-success">Success! <%= success %></h5>
+                <% } %>
+                <hr>
+                <% include ../partials/newws %>
+            </div>
+        </div>  
+    </div>
+<% include ../partials/footer %>

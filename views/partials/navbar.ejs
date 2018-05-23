@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark text-light">
+    <a class="navbar-brand" href="/"><%= name %></a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-collapse" aria-controls="nav-collapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="nav-collapse">
+        <ul class="navbar-nav mr-auto">
+            <% if (user.admin) { %>
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/newws">New Workspace</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/reloadws">Refresh Workspace List</a>
+            </li>
+            <% } %>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="nav-drop" role="button" data-toggle="dropdown">
+                    <%= user.username %>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="/profile">Profile</a>
+                    <div class="dropdown-divider"></div>
+                    <% if (user.admin) { %>
+                        <a class="dropdown-item" href="/admin">Admin</a>
+                        <div class="dropdown-divider"></div>
+                    <% } %>
+                    <a class="dropdown-item" href="/logout">Logout</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>

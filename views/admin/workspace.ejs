@@ -1,0 +1,22 @@
+<% include ../partials/head %>
+    <% include ../partials/navbar %>
+    <div class="container my-2">
+        <div class="row">
+            <div class="col-md-12">
+                <% if (w) { %>
+                <h3><%= w._key %> <small class="text-muted">Manage</small></h3>
+                <% if (error) { %>
+                    <h5 class="text-danger">Error: <%= error %></h5>
+                <% } %>
+                <% if (success) { %>
+                    <h5 class="text-success">Success! <%= success %></h5>
+                <% } %>
+                <hr>
+                <% include ../partials/editws %>
+                <% } else { %>
+                    <h3>Error <small class="text-muted">Could not find a workspace by this ID</small></h3>
+                <% } %>
+            </div>
+        </div>  
+    </div>
+<% include ../partials/footer %>
