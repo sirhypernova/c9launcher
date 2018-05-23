@@ -38,6 +38,9 @@ Username: admin
 Password: admin
 ```
 
+When you log in, you will see this:
+![After login](https://dogs.are-la.me/8a0aa9.png)
+
 ## Change your workspace root directory
 Log in to c9launcher, then click on your username in the navigation bar.
 Click on Admin.
