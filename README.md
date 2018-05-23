@@ -7,6 +7,7 @@ On your server, run these commands:
 git clone https://github.com/sirhypernova/c9launcher.git
 cd c9launcher
 cp config-example.json config.json
+npm install
 ```
 Now, open config.json.
 It should look something like this:
