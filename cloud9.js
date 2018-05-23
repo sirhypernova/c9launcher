@@ -10,7 +10,11 @@ module.exports = function (config, db) {
         constructor(executable,wsd) {
             this._executable = path.resolve(executable);
             this._wsd = path.resolve(wsd);
-            this._workspaces = fs.readdirSync(this._wsd).filter(name => !name.startsWith('.'));
+            this._workspaces = fs.readdirSync(this._wsd).filter(name => {
+                return !name.startsWith('.')
+            }).filter(name => {
+                return fs.statSync(path.resolve(this._wsd,name)).isDirectory()
+            });
             this._children = {};
         }
         
