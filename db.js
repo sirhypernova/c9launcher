@@ -113,8 +113,8 @@ module.exports = async function (config,cryptr) {
             }
         }
         
-        db.on('open', () => {
-            db.bindSchema(User,'users',{id:'INTEGER PRIMARY KEY AUTOINCREMENT',username: 'TEXT',password: 'TEXT',admin: 'INTEGER'}).then(() => {
+        db.on('open', async () => {
+            await db.bindSchema(User,'users',{id:'INTEGER PRIMARY KEY AUTOINCREMENT',username: 'TEXT',password: 'TEXT',admin: 'INTEGER'}).then(() => {
                   User.get('SELECT id FROM users WHERE id = ?',1).then(d => {
                       if (d == undefined) {
                           new User('admin','admin',1).save().then(() => {
@@ -123,7 +123,7 @@ module.exports = async function (config,cryptr) {
                       }
                   });
             });
-            db.bindSchema(Config,'config',{id:'INTEGER PRIMARY KEY AUTOINCREMENT',key: 'TEXT', value: 'TEXT'}).then(() => {
+            await db.bindSchema(Config,'config',{id:'INTEGER PRIMARY KEY AUTOINCREMENT',key: 'TEXT', value: 'TEXT'}).then(async () => {
                Config.get('SELECT * FROM config WHERE key = ?','Workspace Directory').then(d => {
                    if (d == undefined) {
                        new Config(1,'Workspace Directory','./workspaces').save().then(() => {
@@ -135,7 +135,7 @@ module.exports = async function (config,cryptr) {
                    }
                });
             });
-            db.bindSchema(Workspace,'workspaces',{id:'INTEGER PRIMARY KEY AUTOINCREMENT',key: 'TEXT',workspace: 'TEXT',port: 'INTEGER',username: 'TEXT',password: 'TEXT'}).then();
+            await db.bindSchema(Workspace,'workspaces',{id:'INTEGER PRIMARY KEY AUTOINCREMENT',key: 'TEXT',workspace: 'TEXT',port: 'INTEGER',username: 'TEXT',password: 'TEXT'}).then();
             resolve({User: User, Config: Config, Workspace: Workspace});
         });
     });
