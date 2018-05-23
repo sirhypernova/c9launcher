@@ -55,6 +55,9 @@ Set a name for your workspace, and choose a folder from the dropdown.
 Set your username and password you use to authenticate to the workspace.
 Once you are done, click submit.
 
+When you are done, you should see something like this:
+![Workspace List](https://dogs.are-la.me/ec6196.png)
+
 ## Launch Options
 
 You can launch c9launcher with two different options.
