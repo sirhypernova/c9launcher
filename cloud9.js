@@ -35,7 +35,7 @@ module.exports = function (config, db) {
                    `-w "${path.resolve(this._wsd,workspace)}"`,
                   (collab ? '--collab' : ''),
                   (localOnly ? '--listen localhost' : ''),
-                  (auth && auth.username && auth.password ? `-a ${auth.username}:${auth.password}` : '')
+                  (auth && auth.username && auth.password ? `-a "${auth.username}:${auth.password}"` : '')
                 ];
                 var child = this.execute(args);
                 this._children[id] = {child: child, port: port};
