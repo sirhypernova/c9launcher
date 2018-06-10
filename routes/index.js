@@ -9,7 +9,7 @@ module.exports = function (app, config, db, proxy, c9) {
             res.locals.user = req.session.user;
             res.locals.db = db;
             res.locals.config = config;
-            res.locals.ip = require("ip").address();
+            res.locals.ip = config.ip || require("ip").address();
             next();
         } else {
             if (req.path != '/') return res.redirect('/');
