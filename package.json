@@ -24,7 +24,7 @@
     "is-port-available": "^0.1.5",
     "klaw": "^2.1.1",
     "portfinder": "^1.0.13",
-    "sqlite3po": "^1.5.0",
+    "sqlite3po": "^1.6.1",
     "through2": "^2.0.3",
     "tree-kill": "^1.2.0"
   }
