@@ -1,0 +1,13 @@
+language: json
+    "name": "c9 Launcher",
+    "database": "c9launcher.db",
+    "session": "session.db",
+    "crypto": "a secret to encrypt workspace passwords",
+    "sdkpath": "/home/c9/c9sdk/"
+
+script db:
+  - db.js
+
+default login:
+  - Username  admin
+  - Password  admin
