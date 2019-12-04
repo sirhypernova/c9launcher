@@ -1,4 +1,5 @@
-language: json
+language: node_js
+
     "name": "c9 Launcher",
     "database": "c9launcher.db",
     "session": "session.db",
