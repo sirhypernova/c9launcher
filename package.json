@@ -10,7 +10,7 @@
   "author": "SirHyperNova",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^2.0.1",
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.18.3",
     "connect-sqlite3": "^0.9.11",
     "cryptr": "^3.0.0",
